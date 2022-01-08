@@ -28,12 +28,27 @@ class ProductMenu extends Component {
   render() {
     const menu = this.props.products.map((product) => {
       return (
-        <div key={product.id} className='product'>
-          {product.name}
+        <div key={product.id} className='col-sm-6 col-lg-4 d-flex mb-5'>
+          <div className='card'>
+            <img src={product.image} alt={product.name} className='cardImage' />
+            <div className='card-body text-left'>
+              <h5>{product.name}</h5>
+              <p>{product.description}</p>
+              <p>{product.price}</p>
+            </div>
+            <div className='card-footer'>
+              <a href='#' className='card-link'>
+                add to cart
+              </a>
+              <a href='#' className='card-link'>
+                customize
+              </a>
+            </div>
+          </div>
         </div>
       );
     });
-    return <div className='product-menu white-txt'>{menu}</div>;
+    return <div className='product-menu'>{menu}</div>;
   }
 }
 

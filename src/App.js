@@ -6,12 +6,14 @@ import { PRODUCTS } from './shared/products';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './components/HomeComponent';
 import './App.css';
+import { windowScroll, scrollFunction } from './components/js';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = { products: PRODUCTS };
   }
+
   render() {
     const HomePage = () => {
       return <Home />;
@@ -30,6 +32,8 @@ class App extends Component {
             <Redirect to='/home' />
           </Switch>
           <Footer />
+          {windowScroll()}
+          {scrollFunction()}
         </div>
       </BrowserRouter>
     );

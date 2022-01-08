@@ -15,7 +15,39 @@ function Header() {
             </a>
           </div>
           <div className='col-6 col-lg-10 d-flex align-items-center'>
-            <a href='/productmenu'>Online Menu</a>
+            <nav className='navbar navbar-expand-lg navbar-dark w-100'>
+              <button
+                className='navbar-toggler ml-auto'
+                type='button'
+                data-toggle='collapse'
+                data-target='#mainMenuContent'
+              >
+                <span className='navbar-toggler-icon'></span>
+              </button>
+              <div className='collapse navbar-collapse' id='mainMenuContent'>
+                <ul className='navbar-nav'>
+                  <li className='nav-item'>
+                    <a className='nav-link' href='/home'>
+                      Home
+                    </a>
+                  </li>
+                  <li className='nav-item'>
+                    <a className='nav-link' href='/productmenu'>
+                      Menu
+                    </a>
+                  </li>
+                </ul>
+                <div className='d-flex ml-auto px-5 py-4 p-lg-0 justify-content-around align-items-center'>
+                  <div className='shopping-cart mr-4'>
+                    <i className='fas fa-shopping-cart'></i>{' '}
+                    <span className='badge badge-pill badge-danger'>0</span>
+                  </div>
+                  <a href='menu.html' className='btn order-online'>
+                    Order Online
+                  </a>
+                </div>
+              </div>
+            </nav>
           </div>
         </div>
       </div>
